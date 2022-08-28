@@ -6,12 +6,16 @@
   --primary-white-color: #ffffff;
   --dark-color: #2f303a;
   --light-grey-color: #f5f4fa;
+  --black-color:#000000;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --button-hover: #188CE8;
 }
 
 body {
-  background-color: var(--primary-color);
+background-color: var(--primary-white-color);
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 .header {
@@ -21,18 +25,17 @@ body {
 /*Logo*/
 .logo {
   text-decoration: none;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 .current {
   color: var(--accent-color);
 }
 .logo span {
-  color: #000000;
+  color:var(--black-color);
 }
 /*Nav*/
 .unstyled-list {
@@ -75,6 +78,7 @@ body {
   color: var(--primary-white-color);
 }
 
+
 [type="button"] {
   font-family: inherit;
   background-color: var(--light-grey-color);
@@ -90,13 +94,37 @@ body {
   color: var(--primary-white-color);
   font-family: inherit;
 }
+.main-button {
+  font-family: inherit;
+  background-color: var(--accent-color);
+  font-weight: 700;
+font-size: 16px;
+line-height: 1.9;
+cursor: pointer;
+color: var(--primary-white-color);
+}
+.main-button:focus,
+.main-button:hover {
+  background-color: var(--button-hover);
+  font-family: inherit;
+  color: var(--primary-white-color);
+} 
 /*Section*/
 .team-section {
   background-color: var(--light-grey-color);
 }
-.hidden {
-  display: none;
-}
+.visually-hidden {
+  position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+} 
 
 .caption {
   font-weight: 700;
@@ -134,11 +162,10 @@ body {
 }
 .footer-logo {
   text-decoration: none;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 .footer-logo span {
@@ -149,8 +176,7 @@ body {
   text-decoration: none;
   font-style: normal;
   line-height: 1.7;
-  opacity: 60%;
-  color: var(--primary-white-color);
+  color: var(--footer-text-color);
 }
 .address-link:hover,
 .address-link:focus {
